@@ -1,5 +1,3 @@
-# instagram
-instagram login page in brown tones (en)
+# Instagram Login Page
 
-página de login do instagram em tons de marrom (pt-br)
-
+Coding my own version of Instagram login page using only HTML and CSS
