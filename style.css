@@ -27,7 +27,6 @@ body {
 }
 
 .image {
-    background-color: red;
     height: 100vh;
     overflow: hidden;
     opacity: 0.7;
@@ -46,6 +45,7 @@ body {
     height: 80vh;
     background-color: #f9f2ec;
     margin: auto;
+    z-index: 10;
 }
 
 .group {
@@ -151,26 +151,102 @@ body {
 
 /* media queries */
 
-@media (max-width: 1024px) {
-    .instagram-wrapper{
-        width: 90%;
+@media (max-width: 1920px), (max-height: 1080px) {
+    .continue {
+        height: 60%;
+    }
+
+    .group {
+        padding: 30px;
+    }
+
+    .icon {
+        margin: 20px 0;
     }
 }
 
-@media (max-width: 650px) {
-    .instagram-wrapper{
-        width: 90%;
+@media (max-width: 1280px), (max-height: 720px)  {
+    .continue {
+        height: 80%;
     }
 
-    .phone{
+    .group {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px), (max-height: 1024px)  {
+    .image {
+        position: absolute;
+        width: 100%;
+        z-index: 9;
+    }
+
+    .image img {
+        margin: 0;
+        height: 130%;
+        opacity: 0.2;
+    }
+
+    .continue {
+        height: 60%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 320px), (max-height: 480px)  {
+    .image {
         display: none;
     }
 
-    .continue{
-        width: 100%;
+    .instagram-wrapper {
+        max-height: 100vh;
     }
 
-    .group{
-        border: 1px solid transparent;
+    .continue {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .group {
+        padding: 0;
+        margin: 0;
+    }
+
+    .group:nth-child(2) {
+        border-top: 3px #f9f2ec solid;
+        border-bottom: 3px #f9f2ec solid;
+    }
+
+    .group a, .group p, .app p {
+        font-size: 12px;
+    }
+
+    .logo {
+        height: 3rem;
+        margin-top: 30px;
+    }
+
+    .icon {
+        margin-top: 5px;
+    }
+
+    .icon img{
+        height: 70px;
+    }
+
+    .login {
+        margin-top: 10px;
+    }
+
+    .logout {
+        margin: 10px 0 20px 0;
+    }
+
+    .app-download {
+        height: 2rem;
+        width: 7rem;
+        background-size: cover;
     }
 }
